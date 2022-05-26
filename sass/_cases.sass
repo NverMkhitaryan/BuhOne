@@ -1,0 +1,88 @@
+.cases
+	width: 100%
+	max-width: $width-section
+	margin-left: $margin-section
+	margin-right: $margin-section
+	margin-top: 140px
+	margin-bottom: 140px
+	display: flex
+	justify-content: space-between
+
+	.about_title
+		color: #005FA3
+		margin-bottom: 60px
+
+	p
+		font-size: 18px
+		width: 450px
+
+	.cases_cards
+		display: grid
+		grid-template-columns: repeat(2, 250px)
+		grid-auto-rows: 250px
+		grid-gap: 30px
+
+		.card
+			background-color: #EBEBEB
+			padding: 30px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			transition: background-color 0.5s ease, color 0.5s ease
+
+			&:hover
+				background-color: #005FA3
+				color: #fff
+
+				a
+					color: #fff
+
+			h3
+				font-size: 55px
+
+			p
+				width: 100px
+				font-size: 14px
+
+			a
+				color: #005FA3
+				font-weight: 700
+				transition: color 0.5s ease
+
+@media (max-width: 1100px)
+
+	.cases
+		flex-direction: column
+		align-items: center
+		margin-top: 100px
+		margin-bottom: 100px
+
+		.about
+			p
+				width: 100%
+				margin-bottom: 40px
+
+		.cases_cards
+			width: 100%
+			grid-template-columns: repeat(2, minmax(250px, auto))
+
+@media (max-width: 610px)
+	.cases
+		flex-direction: column
+		align-items: center
+		margin-top: 100px
+		margin-bottom: 100px
+
+		.about
+			p
+				width: 100%
+				margin-bottom: 40px
+
+		.cases_cards
+			width: 100%
+			grid-template-columns: repeat(1, 1fr)
+			grid-auto-rows: auto
+
+			.card
+				flex-direction: row
+				align-items: center

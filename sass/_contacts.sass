@@ -1,0 +1,163 @@
+.bg_footer
+	background-image: url('../media/bg_footer.png')
+	background-size: cover
+	background-position: center
+
+.contact
+	width: 100%
+	max-width: $width-section
+	margin-left: $margin-section
+	margin-right: $margin-section
+	margin-top: 140px
+	margin-bottom: 140px
+	display: flex
+	justify-content: space-between
+
+	.contact_text
+		color: #fff
+		max-width: 450px
+		width: 100%
+		min-height: 250px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		h2
+			color: #fff
+
+		p
+			font-size: 18px
+
+	.contact_details
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+		&>div
+			display: flex
+			align-items: center
+			font-size: 30px
+
+			a
+				font-size: 21px
+				margin-left: 20px
+				color: #fff
+
+	form
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		position: relative
+		max-width: 450px
+		width: 100%
+
+		.users
+			display: flex
+			margin-bottom: 20px
+
+			div
+				width: 100%
+				display: flex
+				flex-direction: column
+
+			div+div
+				margin-left: 20px
+
+		.user_message
+			display: flex
+			flex-direction: column
+			height: 100%
+
+		label
+			color: #fff
+			font-size: 16px
+			margin-bottom: 10px
+
+		input
+			border: none
+			background-color: transparent
+			border-bottom: 1px solid #fff
+			padding-bottom: 5px
+			height: 100%
+			width: 100%
+			color: #fff
+			font-size: 24px
+			padding: 5px
+
+			&:hover
+				background-color: #ffffff30
+
+			&:focus-visible
+				outline: none
+				background-color: #ffffff20
+				border-radius: 3px
+
+			&::placeholder
+				color: #BDBDBD
+				font-size: 21px
+
+		textarea
+			border: none
+			background-color: transparent
+			border-bottom: 1px solid #fff
+			padding-bottom: 5px
+			height: 100%
+			width: 100%
+			color: #fff
+			font-size: 24px
+			resize: none
+			padding: 5px
+
+			&:hover
+				background-color: #ffffff30
+
+			&:focus-visible
+				outline: none
+				background-color: #ffffff20
+				border-radius: 3px
+
+			&::placeholder
+				color: #BDBDBD
+				font-size: 21px
+
+
+		button
+			position: absolute
+			bottom: -80px
+			right: 0
+			background-color: #005FA3
+			color: #fff
+			border: none
+			width: 270px
+			height: 60px
+			font-size: 18px
+			transition: background-color 0.3s ease
+			cursor: pointer
+
+			&:hover
+				background-color: #0080dc
+
+@media (max-width: 1000px)
+	
+	.contact
+		flex-direction: column
+		align-items: center
+		margin-top: 70px
+		margin-bottom: 140px
+
+		.contact_text
+			margin-bottom: 80px
+
+		form
+			button
+				width: 200px
+				height: 40px
+				font-size: 13px
+
+@media (max-width: 500px)
+
+	.contact_details
+		flex-direction: column
+
+		div+div
+			margin-top: 20px

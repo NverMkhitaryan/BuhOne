@@ -1,0 +1,146 @@
+.feedback
+	max-width: $width-section + ($margin-section*2)
+	width: 100%
+	padding-left: $margin-section
+	padding-right: $margin-section
+	margin-top: 100px
+	margin-bottom: 170px
+
+	h2
+		margin-bottom: 60px
+
+.feedback-container
+	margin: 0 auto
+	width: 100%
+	height: auto
+	position: relative
+
+	&>div
+		width: 100%
+		height: 100%
+
+	.feedback-main
+		overflow: hidden
+
+	.feedback-film
+		height: 100%
+		position: relative
+		display: flex
+		right: 0
+		transition: right 0.5s ease
+
+		&>div
+			height: 100%
+			background-size: cover
+			background-position: center
+			display: flex
+			justify-content: center
+			align-items: center
+
+	.feedback-trigger
+		position: absolute
+		transform: translateY(-100%)
+		right: 0
+		top: 140%
+		display: flex
+
+		&>div
+			height: 50px
+			width: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 14px
+			color: white
+			background-color: #005FA359
+			cursor: pointer
+			transition: background-color 0.3s ease
+
+			&:hover
+				background-color: #005fa3
+
+	.feedback-points
+		position: absolute
+		transform: translateY(-100%)
+		top: 140%
+		left: 0
+		display: flex
+		list-style: none
+
+		li
+			width: 8px
+			height: 8px
+			background-color: #005FA359
+			cursor: pointer
+			border-radius: 50px
+			transition: background-color 0.2s ease
+
+			&:hover
+				background-color: #005FA3d6
+
+			&.active
+				background-color: #005FA3
+
+		li+li
+			margin-left: 30px
+
+.content-feedback
+	width: $width-section
+	height: 100%
+	margin-left: 90px
+	margin-right: 90px
+	padding-top: 40px
+	padding-bottom: 40px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+
+	.p-feedback
+		color: #000
+		font-size: 18px
+		margin-bottom: 58px
+
+	.human
+		display: flex
+		align-items: center
+
+		.humanImg
+			height: 80px
+			width: 80px
+			border-radius: 50px
+			background-size: cover
+			background-position: center
+			margin-right: 35px
+
+		.humanName
+			font-size: 18px
+			font-weight: 900
+			margin-bottom: 5px
+
+		.humanСompany
+			font-size: 14px
+
+@media (max-width: 667px)
+
+	.feedback-container
+		.feedback-trigger
+			top: 120%
+
+			&>div
+				height: 35px
+				width: 35px
+				font-size: 10px
+
+		.feedback-points
+			top: 120%
+
+			li
+				width: 6px
+				height: 6px
+
+			li+li
+				margin-left: 15px
+
+	.content-feedback
+		margin-left: 30px
+		margin-right: 30px

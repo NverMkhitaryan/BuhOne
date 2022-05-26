@@ -1,0 +1,62 @@
+.services
+	max-width: $width-section
+	width: 100%
+	margin-left: $margin-section
+	margin-right: $margin-section
+	margin-top: 140px
+	margin-bottom: 140px
+
+	h2
+		margin-bottom: 100px
+
+.services-grid
+	display: grid
+	grid-template-columns: repeat(3, minmax(250px, auto))
+	grid-auto-rows: 300px
+	grid-gap: 30px
+
+	.bg_service
+		height: 100%
+		width: 100%
+		background: url('../media/img_servise.png')
+		background-size: 100% 100%
+		background-position: center
+		transition: background-size 2s ease
+
+		&:hover
+			background-size: 120% 120%
+			transition: background-size 10s ease
+
+		.service
+			height: 100%
+			width: 100%
+			background-color: rgba(26, 160, 255, 0)
+			display: flex
+			align-items: flex-end
+			padding: 45px
+			transition: background 0.5s ease
+
+			&:hover
+				background: rgba(26, 160, 255, 0.5)
+				background-size: cover
+				background-position: center
+
+			h4
+				color: #fff
+				font-size: 20px
+
+@media  (max-width: 885px)
+
+	.services
+		margin-top: 100px
+		margin-bottom: 100px
+
+		h2
+			margin-bottom: 50px
+
+	.services-grid
+		grid-template-columns: repeat(2, minmax(250px, auto))
+
+@media  (max-width: 610px)
+	.services-grid
+		grid-template-columns: repeat(1, minmax(250px, auto))

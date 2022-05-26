@@ -1,0 +1,135 @@
+.slider-container
+	margin: 0 auto
+	width: 100%
+	height: 600px
+	position: relative
+
+	&>div
+		width: 100%
+		height: 100%
+
+	.slider-main
+		overflow: hidden
+
+	.slider-film
+		height: 100%
+		position: relative
+		display: flex
+		right: 0
+		transition: right 0.5s ease
+
+		&>div
+			height: 100%
+			background-size: cover
+			background-position: center
+			display: flex
+			justify-content: center
+			align-items: center
+
+			.content-header
+				width: $width-section
+				height: 300px
+				margin-left: $margin-section
+				margin-right: $margin-section
+				margin-top: 10px
+				margin-bottom: 10px
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+
+				.h2-header
+					color: #fff
+					font-size: 48px
+					max-width: 515px
+
+				.btn-header
+					background-color: #005FA3
+					color: #fff
+					border: none
+					width: 270px
+					height: 60px
+					font-size: 18px
+					transition: background-color 0.3s ease
+					cursor: pointer
+
+					&:hover
+						background-color: #0080dc
+
+
+
+	.slider-trigger
+		position: absolute
+		right: 13%
+		bottom: 10%
+		display: flex
+
+		&>div
+			height: 50px
+			width: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 14px
+			color: white
+			background-color: #ffffff59
+			cursor: pointer
+			transition: background-color 0.3s ease
+
+			&:hover
+				background-color: #ffffffa6
+
+	.slider-points
+		position: absolute
+		bottom: 10%
+		left: 13%
+		display: flex
+		list-style: none
+
+		li
+			width: 8px
+			height: 8px
+			background-color: #ffffff59
+			cursor: pointer
+			border-radius: 50px
+			transition: background-color 0.2s ease
+
+			&:hover
+				background-color: #ffffffd6
+
+			&.active
+				background-color: #ffffff
+
+		li+li
+			margin-left: 30px
+
+@media (max-width: 667px)
+
+	.slider-container
+		height: 400px
+
+		.slider-film
+			&>div
+				.content-header
+					height: 200px
+					.h2-header
+						font-size: 30px
+						max-width: 322px
+
+					.btn-header
+						width: 200px
+						height: 40px
+						font-size: 13px
+
+		.slider-trigger
+			&>div
+				height: 35px
+				width: 35px
+				font-size: 10px
+
+		.slider-points
+			li
+				width: 6px
+				height: 6px
+
+			li+li
+				margin-left: 15px

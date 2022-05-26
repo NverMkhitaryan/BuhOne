@@ -1,0 +1,74 @@
+header
+    background: #f9f9f9
+
+    nav
+        height: 110px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        
+        .logo
+
+            a
+                display: flex
+                align-items: center
+                
+
+            span
+                color: #005FA3
+                font-family: Merriweather
+                font-size: 36px
+                font-weight: 900
+                margin-left: 30px
+        
+        .menu
+            display: flex
+            align-items: center
+            
+            &.active
+                display: flex
+            
+            li
+                a   
+                    color: #222
+                    font-family: Lato
+                    font-size: 14px
+                    font-weight: 700
+                    text-transform: uppercase
+            
+            li + li
+                margin-left: 68px
+                
+        .nav-btn
+            background: url('../media/nav-btn.svg') no-repeat
+            width: 50px
+            height: 50px
+            display: none
+        
+
+@media screen and (max-width: 860px)
+    header
+        nav
+            position: relative
+            .menu
+                display: none
+                
+                &.active
+                    display: flex
+                    flex-direction: column
+                    position: absolute
+                    background-color: #f9f9f9
+                    padding: 20px
+                    right: 0
+                    top: 110px
+                    align-items: self-start
+                    z-index: 99
+                    
+                    li + li
+                        margin-top: 20px
+                        margin-left: 0px
+                    li
+                        margin-right: 100px
+
+            .nav-btn
+                 display: flex
